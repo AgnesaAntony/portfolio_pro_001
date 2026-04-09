@@ -5,22 +5,22 @@ const categories = [
   {
     icon: Code2,
     title: "Programming",
-    skills: ["Python", "SQL", "JavaScript", "R", "Bash"],
+    skills: ["Python", "SQL", "JavaScript"],
   },
   {
     icon: Database,
     title: "Data Analysis",
-    skills: ["Pandas", "NumPy", "Excel", "Tableau", "Power BI"],
+    skills: ["Pandas", "NumPy", "Excel", "Power BI", "Matplotlib", "Seaborn"],
   },
   {
     icon: Brain,
     title: "Machine Learning",
-    skills: ["Scikit-learn", "TensorFlow", "NLP", "Regression", "Classification"],
+    skills: ["Scikit-learn", "NLP", "OpenCV", "Tesseract OCR", "Classification"],
   },
   {
     icon: Wrench,
     title: "Tools & Platforms",
-    skills: ["Git", "Jupyter", "VS Code", "Docker", "Streamlit"],
+    skills: ["Jupyter Notebook", "Kaggle", "SSMS", "Git", "PowerPoint"],
   },
 ];
 

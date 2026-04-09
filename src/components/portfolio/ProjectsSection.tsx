@@ -1,30 +1,42 @@
-import { ExternalLink, Github, TrendingUp, BarChart3, Shield } from "lucide-react";
+import { ExternalLink, Github, TrendingUp, BarChart3, Search, FileText } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const projects = [
   {
     icon: TrendingUp,
-    title: "Bitcoin Market Sentiment Analysis",
-    problem: "Crypto markets are volatile and driven by emotion. Can social media sentiment predict short-term price movements?",
-    tools: ["Python", "NLTK", "Pandas", "Plotly", "Twitter API"],
-    results: "Achieved 78% accuracy in sentiment classification. Identified Fear/Greed cycles that preceded 3 major price swings in a 6-month window.",
+    title: "Bitcoin Sentiment Analysis",
+    problem: "Can social media sentiment patterns predict cryptocurrency market movements? Analyzed a Kaggle sentiment dataset to uncover trends.",
+    tools: ["Python", "Pandas", "Matplotlib", "Seaborn", "NLP"],
+    results: "Identified sentiment distribution patterns and word frequency trends. Built comprehensive EDA with text preprocessing and visualizations.",
     color: "primary",
+    github: "https://github.com/AgnesaAntony",
+  },
+  {
+    icon: Search,
+    title: "Job Detection & Classification",
+    problem: "How can we classify job roles based on skills and descriptions? Imported and analyzed job description datasets for skill-based role classification.",
+    tools: ["Python", "Pandas", "Seaborn", "Matplotlib", "EDA"],
+    results: "Uncovered patterns in job roles, most in-demand skills, and company distributions. Created clear visualizations of job type frequency and skill demand.",
+    color: "accent",
+    github: "https://github.com/AgnesaAntony",
   },
   {
     icon: BarChart3,
-    title: "Trader Behavior Analysis Dashboard",
-    problem: "How do retail traders react during market crashes vs rallies? Understanding behavior patterns can improve risk models.",
-    tools: ["Python", "Streamlit", "SQL", "Matplotlib", "Scikit-learn"],
-    results: "Analyzed 100K+ trade records. Found that 73% of retail traders increase position size during downtrends — a key contrarian indicator.",
-    color: "accent",
+    title: "Movie Rating Analysis",
+    problem: "What drives movie ratings? Analyzed movie datasets including titles, genres, ratings, and reviews to identify trends in performance.",
+    tools: ["Python", "Pandas", "Matplotlib", "Seaborn", "EDA"],
+    results: "Identified rating distributions, top-rated movies, genre popularity trends, and year-wise performance patterns with rich data visualizations.",
+    color: "primary",
+    github: "https://github.com/AgnesaAntony",
   },
   {
-    icon: Shield,
-    title: "Unsafe Activity Detection System",
-    problem: "Online platforms need automated detection of harmful content. Can NLP models flag unsafe activity in real-time?",
-    tools: ["Python", "TensorFlow", "SpaCy", "FastAPI", "PostgreSQL"],
-    results: "Built a classifier with 91% precision on a 50K-sample dataset. Reduced manual review time by 60% in testing environment.",
-    color: "primary",
+    icon: FileText,
+    title: "Resume Analyzer & Builder",
+    problem: "How can job seekers identify gaps in their resumes? Built a web-based tool to evaluate resumes and suggest improvements.",
+    tools: ["Python", "Text Analysis", "NLP", "Web Dev"],
+    results: "Developed a full resume parsing pipeline with personalized feedback, skill gap identification, and a builder module with structured templates.",
+    color: "accent",
+    github: "https://github.com/AgnesaAntony",
   },
 ];
 
@@ -41,8 +53,8 @@ const ProjectsSection = () => {
           Real problems. Real data. Real outcomes.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map(({ icon: Icon, title, problem, tools, results, color }, i) => (
+        <div className="grid md:grid-cols-2 gap-6">
+          {projects.map(({ icon: Icon, title, problem, tools, results, color, github }, i) => (
             <div key={i} className="glass-card-hover p-6 flex flex-col">
               <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 ${color === "accent" ? "bg-accent/10" : "bg-primary/10"}`}>
                 <Icon size={20} className={color === "accent" ? "text-accent" : "text-primary"} />
@@ -60,7 +72,7 @@ const ProjectsSection = () => {
                 <span className="text-primary font-medium">Result:</span> {results}
               </p>
               <div className="flex gap-3 mt-auto">
-                <a href="#" className="flex items-center gap-1.5 text-sm text-primary hover:underline">
+                <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-primary hover:underline">
                   <Github size={14} /> View Code
                 </a>
                 <a href="#" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
