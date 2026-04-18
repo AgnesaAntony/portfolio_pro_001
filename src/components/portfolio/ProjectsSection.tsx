@@ -27,7 +27,7 @@ const projects = [
     tools: ["Python", "Pandas", "Matplotlib", "Seaborn", "EDA"],
     results: "Identified rating distributions, top-rated movies, genre popularity trends, and year-wise performance patterns with rich data visualizations.",
     color: "primary",
-    github: "https://github.com/AgnesaAntony",
+    github: "https://github.com/AgnesaAntony/Python_Project_1",
   },
   {
     icon: FileText,
