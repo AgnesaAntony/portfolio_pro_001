@@ -1,4 +1,4 @@
-import { ExternalLink, Github, TrendingUp, BarChart3, Search, FileText } from "lucide-react";
+import { Github, TrendingUp, BarChart3, Search, FileText } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const projects = [
