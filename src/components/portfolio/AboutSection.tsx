@@ -20,9 +20,15 @@ const AboutSection = () => {
           A B.E. Computer Science student at DMI College of Engineering, passionate about turning raw data into stories that drive decisions.
         </p>
 
-        <div className="glass-card p-6 md:p-10 mb-12">
+        <div className="glass-card p-6 md:p-10 mb-12 space-y-4">
           <p className="text-secondary-foreground leading-relaxed">
-            My journey started with curiosity about what data can reveal. I taught myself Python, dove deep into <span className="text-primary font-medium">Pandas, NumPy, Matplotlib, and Seaborn</span>, and started building projects that analyze real-world data — from Bitcoin sentiment to job market trends. Through my CodSoft virtual internship, I gained hands-on experience working with production-level data, performing EDA, cleaning messy datasets, and delivering insights independently. Now at <span className="text-primary font-medium">L&T</span>, I'm working on real-time ML projects including PPE detection, crowd detection, and OCR with Tesseract. I believe the best insights come from asking better questions — and I'm always looking for the next one to answer.
+            I'm a data science enthusiast with a strong foundation in <span className="text-primary font-medium">Python</span> and hands-on experience in data analysis and machine learning. I've worked on projects like <span className="text-primary font-medium">Bitcoin sentiment analysis</span> and job market trends, focusing on extracting meaningful insights from real-world data.
+          </p>
+          <p className="text-secondary-foreground leading-relaxed">
+            During my <span className="text-primary font-medium">CodSoft internship</span>, I handled data cleaning, exploratory data analysis, and insight generation on real datasets. Currently, at <span className="text-primary font-medium">L&T</span>, I'm working on real-time machine learning projects such as PPE detection, crowd detection, and OCR using Tesseract.
+          </p>
+          <p className="text-secondary-foreground leading-relaxed">
+            I'm passionate about solving real-world problems using data and continuously improving my skills in analytics and machine learning.
           </p>
         </div>
 
