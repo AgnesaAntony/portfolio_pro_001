@@ -9,7 +9,7 @@ const projects = [
     tools: ["Python", "Pandas", "Matplotlib", "Seaborn", "NLP"],
     results: "Identified sentiment distribution patterns and word frequency trends. Built comprehensive EDA with text preprocessing and visualizations.",
     color: "primary",
-    github: "https://github.com/AgnesaAntony",
+    github: "https://github.com/AgnesaAntony/SentimentAnalyse",
   },
   {
     icon: Search,
