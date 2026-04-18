@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import profileImg from "@/assets/profile.jpeg";
 
 const phrases = [
   "Data Analyst",
@@ -78,8 +79,15 @@ const HeroSection = () => {
         </div>
 
         <div className="flex-shrink-0 animate-float">
-          <div className="w-56 h-56 md:w-72 md:h-72 rounded-full border-2 border-primary/30 flex items-center justify-center bg-secondary/30 backdrop-blur-sm">
-            <span className="font-mono text-5xl glow-text font-bold">AA</span>
+          <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full p-1 bg-gradient-to-br from-primary via-accent to-primary/30 shadow-[0_0_60px_-10px_hsl(var(--primary)/0.5)]">
+            <div className="w-full h-full rounded-full overflow-hidden bg-secondary/30 backdrop-blur-sm border border-primary/20">
+              <img
+                src={profileImg}
+                alt="Agnesa A — Aspiring Data Scientist"
+                className="w-full h-full object-cover"
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
       </div>
