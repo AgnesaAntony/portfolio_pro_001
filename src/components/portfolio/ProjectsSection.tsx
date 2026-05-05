@@ -1,4 +1,4 @@
-import { Github, TrendingUp, BarChart3, Search, FileText } from "lucide-react";
+import { Github, TrendingUp, BarChart3, Search, FileText, ExternalLink } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const projects = [
@@ -10,6 +10,7 @@ const projects = [
     results: "Developed a full resume parsing pipeline with personalized feedback, skill gap identification, and a builder module with structured templates.",
     color: "primary",
     github: "https://github.com/AgnesaAntony",
+    demo: "https://resume-ai-resume-analyzer-resume-bu-three.vercel.app",
   },
   {
     icon: TrendingUp,
