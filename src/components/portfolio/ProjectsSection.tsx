@@ -76,6 +76,11 @@ const ProjectsSection = () => {
                 <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-primary hover:underline">
                   <Github size={14} /> View Code
                 </a>
+                {demo && (
+                  <a href={demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-accent hover:underline">
+                    <ExternalLink size={14} /> Live Demo
+                  </a>
+                )}
               </div>
             </div>
           ))}
