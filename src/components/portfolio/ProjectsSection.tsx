@@ -55,7 +55,7 @@ const ProjectsSection = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map(({ icon: Icon, title, problem, tools, results, color, github }, i) => (
+          {projects.map(({ icon: Icon, title, problem, tools, results, color, github, demo }, i) => (
             <div key={i} className="glass-card-hover p-6 flex flex-col">
               <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 ${color === "accent" ? "bg-accent/10" : "bg-primary/10"}`}>
                 <Icon size={20} className={color === "accent" ? "text-accent" : "text-primary"} />
