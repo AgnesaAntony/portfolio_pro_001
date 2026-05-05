@@ -38,15 +38,6 @@ const projects = [
     color: "primary",
     github: "https://github.com/AgnesaAntony/Python_Project_1",
   },
-  {
-    icon: FileText,
-    title: "Resume Analyzer & Builder",
-    problem: "How can job seekers identify gaps in their resumes? Built a web-based tool to evaluate resumes and suggest improvements.",
-    tools: ["Python", "Text Analysis", "NLP", "Web Dev"],
-    results: "Developed a full resume parsing pipeline with personalized feedback, skill gap identification, and a builder module with structured templates.",
-    color: "accent",
-    github: "https://github.com/AgnesaAntony",
-  },
 ];
 
 const ProjectsSection = () => {
