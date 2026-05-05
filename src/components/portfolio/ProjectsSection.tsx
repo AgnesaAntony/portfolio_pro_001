@@ -9,7 +9,7 @@ const projects = [
     tools: ["Python", "Text Analysis", "NLP", "Web Dev"],
     results: "Developed a full resume parsing pipeline with personalized feedback, skill gap identification, and a builder module with structured templates.",
     color: "primary",
-    github: "https://github.com/AgnesaAntony",
+    github: "https://github.com/AgnesaAntony/ResumeAI-Resume-Analyzer-Resume-Builder",
     demo: "https://resume-ai-resume-analyzer-resume-bu-three.vercel.app",
   },
   {
