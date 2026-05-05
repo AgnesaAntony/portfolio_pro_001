@@ -1,4 +1,4 @@
-import { Github, TrendingUp, BarChart3, Search, FileText } from "lucide-react";
+import { Github, TrendingUp, BarChart3, Search, FileText, ExternalLink } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const projects = [
@@ -10,6 +10,7 @@ const projects = [
     results: "Developed a full resume parsing pipeline with personalized feedback, skill gap identification, and a builder module with structured templates.",
     color: "primary",
     github: "https://github.com/AgnesaAntony",
+    demo: "https://resume-ai-resume-analyzer-resume-bu-three.vercel.app",
   },
   {
     icon: TrendingUp,
@@ -54,7 +55,7 @@ const ProjectsSection = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map(({ icon: Icon, title, problem, tools, results, color, github }, i) => (
+          {projects.map(({ icon: Icon, title, problem, tools, results, color, github, demo }, i) => (
             <div key={i} className="glass-card-hover p-6 flex flex-col">
               <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 ${color === "accent" ? "bg-accent/10" : "bg-primary/10"}`}>
                 <Icon size={20} className={color === "accent" ? "text-accent" : "text-primary"} />
@@ -75,6 +76,11 @@ const ProjectsSection = () => {
                 <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-primary hover:underline">
                   <Github size={14} /> View Code
                 </a>
+                {demo && (
+                  <a href={demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-accent hover:underline">
+                    <ExternalLink size={14} /> Live Demo
+                  </a>
+                )}
               </div>
             </div>
           ))}
