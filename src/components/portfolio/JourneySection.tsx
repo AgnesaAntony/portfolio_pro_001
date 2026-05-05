@@ -4,8 +4,8 @@ const milestones = [
   { year: "2022", title: "Started B.E. in CSE", desc: "Joined DMI College of Engineering, Chennai. Began exploring programming and data." },
   { year: "2023", title: "Learned Python & Data Analysis", desc: "Mastered Pandas, NumPy, Matplotlib, and Seaborn. Started working with real datasets on Kaggle." },
   { year: "2024", title: "First Data Projects", desc: "Built Bitcoin Sentiment Analysis, Job Detection, and Movie Rating Analysis projects." },
-  { year: "2025", title: "Resume Analyzer & Builder", desc: "Developed a web-based tool for resume evaluation with NLP and text analysis." },
-  { year: "2026", title: "CodSoft Internship", desc: "Virtual Data Science internship — worked on real-world data projects independently." },
+  { year: "2025", title: "CodSoft Internship", desc: "Virtual Data Science internship — worked on real-world data projects independently." },
+  { year: "2026", title: "Resume Analyzer & Builder", desc: "Developed a web-based tool for resume evaluation with NLP and text analysis." },
   { year: "2026", title: "L&T Internship", desc: "Working on real-time ML: PPE detection, crowd detection, OCR with Tesseract, and SSMS backend." },
 ];
 
