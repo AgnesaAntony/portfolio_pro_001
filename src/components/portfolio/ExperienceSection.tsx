@@ -29,7 +29,7 @@ const experiences = [
   {
     role: "Data Science Intern",
     company: "CodSoft (Virtual)",
-    duration: "Jan 2026 – Feb 2026",
+    duration: "Jan 2025 – Feb 2025",
     description: [
       "Worked on real-world data projects as part of a virtual internship, delivering insights independently in a remote environment.",
       "Performed <span class='text-primary font-medium'>data analysis, cleaning, transformation, and EDA</span> using NumPy, Pandas, Matplotlib, and Seaborn to support data-driven decision-making.",
