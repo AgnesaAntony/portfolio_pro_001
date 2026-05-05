@@ -3,6 +3,15 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const projects = [
   {
+    icon: FileText,
+    title: "Resume Analyzer & Builder",
+    problem: "How can job seekers identify gaps in their resumes? Built a web-based tool to evaluate resumes and suggest improvements.",
+    tools: ["Python", "Text Analysis", "NLP", "Web Dev"],
+    results: "Developed a full resume parsing pipeline with personalized feedback, skill gap identification, and a builder module with structured templates.",
+    color: "primary",
+    github: "https://github.com/AgnesaAntony",
+  },
+  {
     icon: TrendingUp,
     title: "Bitcoin Sentiment Analysis",
     problem: "Can social media sentiment patterns predict cryptocurrency market movements? Analyzed a Kaggle sentiment dataset to uncover trends.",
@@ -28,15 +37,6 @@ const projects = [
     results: "Identified rating distributions, top-rated movies, genre popularity trends, and year-wise performance patterns with rich data visualizations.",
     color: "primary",
     github: "https://github.com/AgnesaAntony/Python_Project_1",
-  },
-  {
-    icon: FileText,
-    title: "Resume Analyzer & Builder",
-    problem: "How can job seekers identify gaps in their resumes? Built a web-based tool to evaluate resumes and suggest improvements.",
-    tools: ["Python", "Text Analysis", "NLP", "Web Dev"],
-    results: "Developed a full resume parsing pipeline with personalized feedback, skill gap identification, and a builder module with structured templates.",
-    color: "accent",
-    github: "https://github.com/AgnesaAntony",
   },
 ];
 
