@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Upload, Send, Sparkles, FileText, X, CheckCircle2, ClipboardList } from "lucide-react";
+import { Upload, Send, Sparkles, FileText, X, CheckCircle2, Swords } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { toast } from "@/hooks/use-toast";
 
@@ -9,7 +9,7 @@ interface AssignedTask {
   problem: string;
   files: { name: string; size: number }[];
   assignedAt: Date;
-  status: "Assigned" | "In Review" | "Completed";
+  status: "Received" | "In Progress" | "Solved";
 }
 
 const MiniLabSection = () => {
@@ -34,7 +34,7 @@ const MiniLabSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!title.trim() || !problem.trim()) {
-      toast({ title: "Missing details", description: "Please add a title and problem statement." });
+      toast({ title: "Missing details", description: "Please add a challenge title and description." });
       return;
     }
     setSubmitting(true);
@@ -45,14 +45,14 @@ const MiniLabSection = () => {
         problem: problem.trim(),
         files: files.map((f) => ({ name: f.name, size: f.size })),
         assignedAt: new Date(),
-        status: "Assigned",
+        status: "Received",
       };
       setTasks((prev) => [newTask, ...prev]);
       setTitle("");
       setProblem("");
       setFiles([]);
       setSubmitting(false);
-      toast({ title: "Task assigned", description: `"${newTask.title}" has been added to the queue.` });
+      toast({ title: "Challenge received", description: `"${newTask.title}" — I'll take a crack at it!` });
     }, 900);
   };
 
@@ -66,39 +66,39 @@ const MiniLabSection = () => {
     <section id="lab" className="section-padding relative">
       <div className="container mx-auto max-w-4xl" ref={ref}>
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
-          Mini <span className="glow-text">Lab</span>
+          Challenge <span className="glow-text">Me</span>
         </h2>
         <p className="text-muted-foreground text-center mb-12">
-          Assign a task — upload files and describe the problem statement.
+          Got a tricky problem or coding challenge? Drop it here and I'll take it on.
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {/* Assign form */}
+          {/* Challenge form */}
           <form onSubmit={handleSubmit} className="glass-card p-6 md:p-8 space-y-4">
             <div className="flex items-center gap-2 mb-2">
-              <ClipboardList size={18} className="text-primary" />
-              <h3 className="font-semibold">Assign a Task</h3>
+              <Swords size={18} className="text-primary" />
+              <h3 className="font-semibold">Send a Challenge</h3>
             </div>
 
             <div>
-              <label className="text-xs text-muted-foreground mb-1 block">Task title</label>
+              <label className="text-xs text-muted-foreground mb-1 block">Challenge title</label>
               <input
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 maxLength={100}
-                placeholder="e.g. Analyze customer churn dataset"
+                placeholder="e.g. Optimize this SQL query"
                 className="w-full px-3 py-2 rounded-lg bg-secondary/40 border border-border/50 text-sm focus:outline-none focus:border-primary/50"
               />
             </div>
 
             <div>
-              <label className="text-xs text-muted-foreground mb-1 block">Problem statement</label>
+              <label className="text-xs text-muted-foreground mb-1 block">Describe the challenge</label>
               <textarea
                 value={problem}
                 onChange={(e) => setProblem(e.target.value)}
                 maxLength={1000}
                 rows={4}
-                placeholder="Describe the goal, constraints, and expected output..."
+                placeholder="What's the problem, constraints, and what does success look like?"
                 className="w-full px-3 py-2 rounded-lg bg-secondary/40 border border-border/50 text-sm resize-none focus:outline-none focus:border-primary/50"
               />
               <p className="text-[10px] text-muted-foreground mt-1 text-right">{problem.length}/1000</p>
@@ -159,11 +159,11 @@ const MiniLabSection = () => {
             >
               {submitting ? (
                 <>
-                  <Sparkles size={16} className="animate-spin" /> Assigning...
+                  <Sparkles size={16} className="animate-spin" /> Sending...
                 </>
               ) : (
                 <>
-                  <Send size={16} /> Assign Task
+                  <Send size={16} /> Send Challenge
                 </>
               )}
             </button>
@@ -173,13 +173,13 @@ const MiniLabSection = () => {
           <div className="glass-card p-6 md:p-8">
             <div className="flex items-center gap-2 mb-4">
               <CheckCircle2 size={18} className="text-primary" />
-              <h3 className="font-semibold">Task Queue</h3>
+              <h3 className="font-semibold">Challenge Board</h3>
               <span className="ml-auto text-xs text-muted-foreground">{tasks.length} total</span>
             </div>
 
             {tasks.length === 0 ? (
               <div className="text-center py-12 text-sm text-muted-foreground">
-                No tasks yet. Assign one to see it appear here.
+                No challenges yet. Send one and watch it land here.
               </div>
             ) : (
               <ul className="space-y-3 max-h-[460px] overflow-y-auto pr-1">
@@ -205,7 +205,7 @@ const MiniLabSection = () => {
                       </div>
                     )}
                     <p className="text-[10px] text-muted-foreground">
-                      Assigned {t.assignedAt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                      Received {t.assignedAt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                     </p>
                   </li>
                 ))}
