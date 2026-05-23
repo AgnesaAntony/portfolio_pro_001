@@ -24,7 +24,7 @@ const experiences = [
       "Automated document digitization workflow using Tesseract OCR integration",
       "Established backend data pipelines connecting ML outputs to SQL Server databases",
     ],
-    current: true,
+    current: false,
   },
   {
     role: "Data Science Intern",
