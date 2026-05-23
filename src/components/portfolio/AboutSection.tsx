@@ -17,7 +17,7 @@ const AboutSection = () => {
           About <span className="glow-text">Me</span>
         </h2>
         <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          A B.E. Computer Science student at DMI College of Engineering, passionate about turning raw data into stories that drive decisions.
+          Computer Science Engineer, passionate about turning raw data into stories that drive decisions.
         </p>
 
         <div className="glass-card p-6 md:p-10 mb-12 space-y-4">
