@@ -38,6 +38,16 @@ const MiniLabSection = () => {
       return;
     }
     setSubmitting(true);
+
+    const fileList = files.length
+      ? `\n\nAttachments (please attach manually):\n${files.map((f) => `- ${f.name} (${(f.size / 1024).toFixed(1)} KB)`).join("\n")}`
+      : "";
+    const body = `Challenge: ${title.trim()}\n\n${problem.trim()}${fileList}`;
+    const mailto = `mailto:agnesa892004@gmail.com?subject=${encodeURIComponent(
+      `[Challenge Me] ${title.trim()}`
+    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+
     setTimeout(() => {
       const newTask: AssignedTask = {
         id: crypto.randomUUID(),
@@ -52,9 +62,10 @@ const MiniLabSection = () => {
       setProblem("");
       setFiles([]);
       setSubmitting(false);
-      toast({ title: "Challenge received", description: `"${newTask.title}" — I'll take a crack at it!` });
-    }, 900);
+      toast({ title: "Opening your email…", description: `Sending "${newTask.title}" to Agnesa.` });
+    }, 600);
   };
+
 
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return `${bytes} B`;
