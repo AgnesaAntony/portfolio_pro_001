@@ -25,7 +25,7 @@ const AboutSection = () => {
             I'm a data science enthusiast with a strong foundation in <span className="text-primary font-medium">Python</span> and hands-on experience in data analysis and machine learning. I've worked on projects like <span className="text-primary font-medium">Bitcoin sentiment analysis</span> and job market trends, focusing on extracting meaningful insights from real-world data.
           </p>
           <p className="text-secondary-foreground leading-relaxed">
-            During my <span className="text-primary font-medium">CodSoft internship</span>, I handled data cleaning, exploratory data analysis, and insight generation on real datasets. Currently, at <span className="text-primary font-medium">L&T</span>, I'm working on real-time machine learning projects such as PPE detection, crowd detection, and OCR using Tesseract.
+            During my <span className="text-primary font-medium">CodSoft internship</span>, I handled data cleaning, exploratory data analysis, and insight generation on real datasets. At <span className="text-primary font-medium">L&T</span>, I worked on real-time machine learning projects such as PPE detection, crowd detection, and OCR using Tesseract.
           </p>
           <p className="text-secondary-foreground leading-relaxed">
             I'm passionate about solving real-world problems using data and continuously improving my skills in analytics and machine learning.

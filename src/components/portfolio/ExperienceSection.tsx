@@ -7,9 +7,9 @@ const experiences = [
     company: "Larsen & Toubro (L&T)",
     duration: "Feb 2026 – May 2026",
     description: [
-      "Working on real-time Machine Learning projects including <span class='text-primary font-medium'>PPE Detection</span> and <span class='text-primary font-medium'>Crowd Detection</span> systems using computer vision and deep learning models.",
-      "Implementing <span class='text-primary font-medium'>OCR with Tesseract</span> for automated document processing and text extraction from images and scanned documents.",
-      "Handling backend connectivity and database management using <span class='text-primary font-medium'>SQL Server Management Studio (SSMS)</span>, integrating ML model outputs with production backend systems.",
+      "Worked on real-time Machine Learning projects including <span class='text-primary font-medium'>PPE Detection</span> and <span class='text-primary font-medium'>Crowd Detection</span> systems using computer vision and deep learning models.",
+      "Implemented <span class='text-primary font-medium'>OCR with Tesseract</span> for automated document processing and text extraction from images and scanned documents.",
+      "Handled backend connectivity and database management using <span class='text-primary font-medium'>SQL Server Management Studio (SSMS)</span>, integrating ML model outputs with production backend systems.",
     ],
     tools: [
       { icon: Code2, label: "Python" },
@@ -24,7 +24,7 @@ const experiences = [
       "Automated document digitization workflow using Tesseract OCR integration",
       "Established backend data pipelines connecting ML outputs to SQL Server databases",
     ],
-    current: true,
+    current: false,
   },
   {
     role: "Data Science Intern",
