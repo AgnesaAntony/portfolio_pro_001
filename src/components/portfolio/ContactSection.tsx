@@ -36,7 +36,8 @@ const ContactSection = () => {
 
           <div className="pt-4">
             <a
-              href="#"
+              href="/Agnesa-Antony-Resume.pdf"
+              download="Agnesa-Antony-Resume.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
             >
               <Download size={16} /> Download Resume
