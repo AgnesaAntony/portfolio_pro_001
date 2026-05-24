@@ -1,11 +1,13 @@
-import { Briefcase, Calendar, ExternalLink, FileText, BarChart3, Database, Brain, Code2, Eye, ScanLine, Server } from "lucide-react";
+import { useState } from "react";
+import { Briefcase, Calendar, ExternalLink, FileText, BarChart3, Database, Brain, Code2, Eye, ScanLine, Server, Award, X } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const experiences = [
   {
     role: "Intern",
-    company: "Larsen & Toubro (L&T) – L&T EduTech",
+    company: "Larsen & Toubro (L&T)",
     duration: "Feb 2026 – May 2026",
+    certificate: "/internship_certificate.jpg",
     description: [
       "Interned at the <span class='text-primary font-medium'>Digital Department, Transportation Infrastructure IC RBF SBG, L&T Construction</span> (16/02/2026 – 16/05/2026), working on <span class='text-primary font-medium'>Machine Learning, Computer Vision, and NLP</span> projects using Python and SQL — covering model development, training, fine-tuning, and deployment for real-time intelligent systems.",
       "Built real-time ML solutions including <span class='text-primary font-medium'>PPE Detection</span>, <span class='text-primary font-medium'>Crowd Detection</span>, and <span class='text-primary font-medium'>OCR with Tesseract</span> for automated document processing and text extraction.",
@@ -55,6 +57,7 @@ const experiences = [
 
 const ExperienceSection = () => {
   const ref = useScrollAnimation();
+  const [certModalOpen, setCertModalOpen] = useState(false);
 
   return (
     <section id="experience" className="section-padding relative">
@@ -123,11 +126,46 @@ const ExperienceSection = () => {
                     ))}
                   </ul>
                 </div>
+
+                {'certificate' in exp && exp.certificate && (
+                  <button
+                    onClick={() => setCertModalOpen(true)}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary text-sm font-mono hover:bg-primary/20 transition-colors"
+                  >
+                    <Award size={16} />
+                    View Certificate
+                  </button>
+                )}
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Certificate Modal */}
+      {certModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setCertModalOpen(false)}
+        >
+          <div
+            className="relative max-w-4xl w-full bg-card rounded-2xl border border-border p-4 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setCertModalOpen(false)}
+              className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-105 transition-transform"
+            >
+              <X size={16} />
+            </button>
+            <img
+              src={experiences[0].certificate}
+              alt="L&T Internship Certificate"
+              className="w-full rounded-lg object-contain max-h-[80vh]"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
