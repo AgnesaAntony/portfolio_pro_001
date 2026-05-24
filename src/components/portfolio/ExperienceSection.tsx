@@ -1,4 +1,5 @@
-import { Briefcase, Calendar, ExternalLink, FileText, BarChart3, Database, Brain, Code2, Eye, ScanLine, Server } from "lucide-react";
+import { useState } from "react";
+import { Briefcase, Calendar, ExternalLink, FileText, BarChart3, Database, Brain, Code2, Eye, ScanLine, Server, Award, X } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const experiences = [
