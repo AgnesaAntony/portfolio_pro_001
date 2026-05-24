@@ -4,28 +4,30 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const experiences = [
   {
     role: "Intern",
-    company: "Larsen & Toubro (L&T)",
+    company: "Larsen & Toubro (L&T) – L&T EduTech",
     duration: "Feb 2026 – May 2026",
     description: [
-      "Worked on real-time Machine Learning projects including <span class='text-primary font-medium'>PPE Detection</span> and <span class='text-primary font-medium'>Crowd Detection</span> systems using computer vision and deep learning models.",
-      "Implemented <span class='text-primary font-medium'>OCR with Tesseract</span> for automated document processing and text extraction from images and scanned documents.",
-      "Handled backend connectivity and database management using <span class='text-primary font-medium'>SQL Server Management Studio (SSMS)</span>, integrating ML model outputs with production backend systems.",
+      "Interned at the <span class='text-primary font-medium'>Digital Department, Transportation Infrastructure IC RBF SBG, L&T Construction</span> (16/02/2026 – 16/05/2026), working on <span class='text-primary font-medium'>Machine Learning, Computer Vision, and NLP</span> projects using Python and SQL — covering model development, training, fine-tuning, and deployment for real-time intelligent systems.",
+      "Built real-time ML solutions including <span class='text-primary font-medium'>PPE Detection</span>, <span class='text-primary font-medium'>Crowd Detection</span>, and <span class='text-primary font-medium'>OCR with Tesseract</span> for automated document processing and text extraction.",
+      "Contributed to <span class='text-primary font-medium'>data processing, database integration (SSMS), and performance optimization</span> to improve model efficiency and system reliability, while quickly adapting to new technologies and strengthening analytical problem-solving skills.",
     ],
     tools: [
       { icon: Code2, label: "Python" },
       { icon: Eye, label: "OpenCV" },
       { icon: ScanLine, label: "Tesseract OCR" },
       { icon: Server, label: "SSMS" },
-      { icon: Brain, label: "ML/DL" },
+      { icon: Brain, label: "ML / CV / NLP" },
     ],
     impacts: [
+      "Developed ML, Computer Vision, and NLP models for real-time intelligent systems",
       "Built real-time PPE detection pipeline for workplace safety compliance monitoring",
       "Developed crowd density estimation system for facility management applications",
       "Automated document digitization workflow using Tesseract OCR integration",
-      "Established backend data pipelines connecting ML outputs to SQL Server databases",
+      "Optimized data processing & database integration for improved model efficiency",
     ],
     current: false,
   },
+
   {
     role: "Data Science Intern",
     company: "CodSoft (Virtual)",
