@@ -5,8 +5,9 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const experiences = [
   {
     role: "Intern",
-    company: "Larsen & Toubro (L&T) – L&T EduTech",
+    company: "Larsen & Toubro (L&T)",
     duration: "Feb 2026 – May 2026",
+    certificate: "/internship_certificate.jpg",
     description: [
       "Interned at the <span class='text-primary font-medium'>Digital Department, Transportation Infrastructure IC RBF SBG, L&T Construction</span> (16/02/2026 – 16/05/2026), working on <span class='text-primary font-medium'>Machine Learning, Computer Vision, and NLP</span> projects using Python and SQL — covering model development, training, fine-tuning, and deployment for real-time intelligent systems.",
       "Built real-time ML solutions including <span class='text-primary font-medium'>PPE Detection</span>, <span class='text-primary font-medium'>Crowd Detection</span>, and <span class='text-primary font-medium'>OCR with Tesseract</span> for automated document processing and text extraction.",
