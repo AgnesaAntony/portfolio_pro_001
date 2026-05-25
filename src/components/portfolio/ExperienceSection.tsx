@@ -58,7 +58,7 @@ const experiences = [
 
 const ExperienceSection = () => {
   const ref = useScrollAnimation();
-  const [certModalOpen, setCertModalOpen] = useState(false);
+  const [activeCert, setActiveCert] = useState<{ src: string; alt: string } | null>(null);
 
   return (
     <section id="experience" className="section-padding relative">
