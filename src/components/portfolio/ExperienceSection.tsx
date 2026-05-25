@@ -130,7 +130,7 @@ const ExperienceSection = () => {
 
                 {'certificate' in exp && exp.certificate && (
                   <button
-                    onClick={() => setCertModalOpen(true)}
+                    onClick={() => setActiveCert({ src: exp.certificate as string, alt: `${exp.company} Certificate` })}
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary text-sm font-mono hover:bg-primary/20 transition-colors"
                   >
                     <Award size={16} />
@@ -144,24 +144,24 @@ const ExperienceSection = () => {
       </div>
 
       {/* Certificate Modal */}
-      {certModalOpen && (
+      {activeCert && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
-          onClick={() => setCertModalOpen(false)}
+          onClick={() => setActiveCert(null)}
         >
           <div
             className="relative max-w-4xl w-full bg-card rounded-2xl border border-border p-4 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              onClick={() => setCertModalOpen(false)}
+              onClick={() => setActiveCert(null)}
               className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-105 transition-transform"
             >
               <X size={16} />
             </button>
             <img
-              src={experiences[0].certificate}
-              alt="L&T Internship Certificate"
+              src={activeCert.src}
+              alt={activeCert.alt}
               className="w-full rounded-lg object-contain max-h-[80vh]"
             />
           </div>
