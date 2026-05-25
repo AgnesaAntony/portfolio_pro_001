@@ -52,6 +52,7 @@ const experiences = [
       "Delivered project documentation and insights to virtual team stakeholders",
     ],
     current: false,
+    certificate: "/codsoft_certificate.png",
   },
 ];
 
