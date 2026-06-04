@@ -2,7 +2,7 @@
 
 A personal portfolio website built with React, Vite, TypeScript, Tailwind CSS, and shadcn/ui. Showcases work experience, projects, skills, and certificates.
 
-**Live site:** https://insight-forge-503.lovable.app
+
 
 ## Tech Stack
 
